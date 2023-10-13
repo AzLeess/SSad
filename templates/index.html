@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" >
+    
+    <title>SSAD
+    </title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="#">TP1 SSAD</a></div>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/inbox">cryptage des donnees</a></li>
+          <li><a href="/attaques">brute force attaques </a></li>
+          <li ><a href="/steno-res">galerie</a></li>
+          <li ><a href="/logout">logout</a></li>
+    
+        </ul>
+      </nav>
+      <div class="etiq-h godown" > <h1> Resume de ce qui suivra dans ce Tp1 SSAD</h1></div>
+      <div class="container goin">
+        <div class="container_sm etiq">
+          <div class="expl">
+            <h1>
+                Description du travail
+            </h1>
+            <p>
+              L’objectif de ce Tp est de réaliser une boîte à outils qui répondra aux fonctionnalités suivantes :<br>
+              
+              </p>
+
+              <ul>
+                <li>-	Ajout et authentification des différents utilisateurs.</li>
+                <li>-	Possibilité aux utilisateurs de communiquer entre eux.</li>
+                <li>-	Les messages échangés seront inévitablement cryptés avec un algorithme parmi les 4 proposés à l’utilisateur de plus la possibilité de cacher des messages sous d'autres formes.</li>
+                <li>-	Possibilité d’évaluer le niveau de sécurité des mots de passes des utilisateurs via des attaques par force brute/dictionnaires.</li>
+              </ul>
+
+              
+              
+              
+
+        </div>
+        </div>
+        <div class="container_sm">
+          <div class="expl etiq">
+            <h3> Authentification :</h3>
+            <p>
+              Pour ce nous avons utiliser un system d'authentification crypte , des Logins stocker dans une base de donnees.
+              pour securiser un maximum l'access nous avons eut recours a un captcha v2 proposer par google une maniere de faire 
+              face au brute force attaques et attaques par dictionnaires(sujet aborde dans une autre phase du projet). <br>
+              il semble important de porter a votre attention que toute rebrique du site exige un login pour y acceder.
+            </p>
+          </div>
+          <img src="/static/uploads/auth.png" alt="" >
+        </div>
+        <div class="container_sm ">
+          <div class="expl etiq">
+            <h3> Crypatge et transmissions des donnees :</h3>
+            <p>
+              Dans un premier lieux cree la liaison entre deux clients en temps reel , tache qui ne s'annonce pas des plus 
+              simples, nous avons eut recours a l'utilisation des sockets pour cree un cheminement de donnees constant entre
+              le serveur et les clients connectes .
+              s'en suit le cryptage des donnees . Nous avons adoptes quatre  algorithmes suggerer par le cahier des charges 
+              Neanmoins nous avons remedier aux lacunes/ failles de chaque algorithme.
+              hors mi le cryptage une methode plus ingenieuse est de dissimuler le contenu, cette approche plus communement appele
+              stenographie. Notre approche consiste a disimuler les messages dans des images.
+            </p>
+        </div>
+        <img src="/static/uploads/cr.png" alt="">
+        </div>
+        <div class="container_sm">
+          <img src="/static/uploads/Br1.png" alt="">
+          <div class="expl  etiq">
+            <h3>Votre mot de passe est-il securise ?</h3>
+            <p>
+              si vous pensez que votre cle secrete est aussi sure que ca. Nous proposons un algorithme
+              qui met a l'epreuve 3 types de mot de passes avec des approches iteratives( dictionnaires/ brute force)
+              nomme iteratives car elle teste naivement toutes les combinaisons possibles.
+            </p>
+        </div>
+        </div>
+        <br>
+        <div class="container_sm">
+          <div class="expl  etiq">
+            <h3>Demo time
+            </h3>
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+
+</body>
+</html>

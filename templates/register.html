@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin Panel Log in</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</head>
+<body>
+    
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-2"></div>
+        <div class="col-lg-6 col-md-8 login-box">
+            <div class="col-lg-12 login-key">
+                <i class="fa fa-key" aria-hidden="true"></i>
+            </div>
+            <div class="col-lg-12 login-title">
+                Register new Admin
+            </div>
+
+            <div class="col-lg-12 login-form">
+                <div class="col-lg-12 login-form">
+                    <form action="/register" method="post">
+                        <div class="form-group">
+                            <label class="form-control-label">USERNAME</label>
+                            <input type="text" class="form-control" name="user" id="user">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">PASSWORD</label>
+                            <input type="password" class="form-control" name="pwd" id="pwd" i>
+                        </div>
+
+                        <div class="col-lg-12 loginbttm">
+                            <div class="col-lg-6 login-btm login-text">
+                                <!-- Error Message -->
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LdXjN0iAAAAAG9J0qcq4Ku2FymUlXM9FpL_ubEa"></div>
+                            <div class="col-lg-6 login-btm login-button">
+                                <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-2"></div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<!--@app.route('/home')
+def home():
+    return "hello , you're in home"
+
+@app.route('/login1',methods=['POST','GET'])
+def auth():
+    if request.method == "POST" :
+        pass 
+        user_info = request.form
+        print(user_info)
+        new_user = User(user=user_info['user'],mdp=user_info['pwd'])
+        #return user_info['username']
+        db.session.add(new_user)
+        db.session.commit()
+    else :
+      return render_template('login.html')
+      
+
+      #loginn 
+@ app.route('/login', methods=['GET', 'POST'])
+def login():
+    print(request.form)
+    if request.method =='POST':
+        user = User.query.filter_by(username=request.form['username']).first()
+        if user:
+            if bcrypt.check_password_hash(user.password, request.form['pwd']):
+                login_user(user)
+                return redirect(url_for('/'))
+    return render_template('login.html')
+
+
+
+@ app.route('/register', methods=['GET', 'POST'])
+def register():
+    user=request.form
+
+    if request.method == "POST":
+        hashed_password = bcrypt.generate_password_hash(user['pwd'])
+
+        new_user = User(username=user['user'], password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+        return new_user
+
+    else :
+        return render_template('login.html')-->
+</html>

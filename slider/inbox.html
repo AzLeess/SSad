@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="inbox.css">
+    <script defer src="inbox.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="dashboard-side">
+    <nav class="side-nav">
+      <div class="logo">My Dashboard</div>
+      <ul>
+        <li class="nav-link">Compose</li>
+        <li class="nav-link active">Inbox</li>
+        <li class="nav-link">Starred</li>
+        <li class="nav-link">Sent</li>
+        <li class="nav-link">Drafts</li>
+        <li class="nav-link">Trash</li>
+        <li class="nav-link">More</li>
+      </ul>
+    </nav>
+    </div>
+    <div class="dashboard-container">
+      <div class="top-nav"> 
+        <p><span id="date"></span></p>
+         <p><span id="time">11:32</span></p>
+      </div>
+      <div class="dashboard-body">
+        <div class="compose-body section">
+          <div class="heading">
+            <h1>Compose</h1>
+          </div>
+          <div class="compose-message">
+            <div class="message-line">
+            <label>To: </label><input type="email"></div>
+            <div class="message-line">
+            <label>Subject: </label><input type="text"></div>
+            <textarea placeholder="Write your message here..."></textarea>
+            <button class="button">Send</button>
+          </div>
+        </div>
+        <div class="inbox-body section">
+        <div class="heading">
+          <h1>Inbox</h1>
+        </div>
+        <div class="inbox">
+          <ul>
+            <li>
+              <div class="email unread">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Christine Tucker</p>
+                <p>Message</p>
+                </div>
+              </div>
+                <div class="star">
+                  <i class="far fa-star"></i>
+                  <p>August 2</p>
+                  </div>
+            </div>
+            </li>
+            <li>
+              <div class="email unread">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Jane Allen</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>August 1</p>
+                  
+                </div>
+            </div>
+            </li>
+            <li>
+              <div class="email unread">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Toby Carlisle</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>July 28</p></div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>George Field</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>July 25</p></div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Casey Jones</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>July 20</p></div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Maria Sans</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>July 17</p></div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Daisy Ransome</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>July 1</p></div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Hugo Michaels</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>June 20</p></div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Laura Curtis</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>June 15</p></div>
+            </div>
+            </li>
+             <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Clive O'Connor</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="far fa-star"></i>
+                <p>June 1</p></div>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <div class="chat-body section">
+        <div class="heading">
+          <h1>Private Chat</h1>
+        </div>
+        <div class="">
+            <div class="private-chat">
+      <ul>
+        <li>
+          <div>
+            
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+  </p>
+            <time>August 2</time>
+          </div>
+        </li>
+        <li>
+          <div>
+         
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+  </p>
+            <time>August 2</time>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+  </p>
+            <time>August 2</time>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+  </p>
+            <time>August 2</time>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+  </p>
+            <time>August 2</time>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+  </p>
+            <time>August 2</time>
+          </div>
+        </li>
+       
+      </ul>
+      
+    </div>
+        </div>
+      </div>
+        <div class="starred-body section">
+        <div class="heading">
+          <h1>Starred</h1>
+        </div>
+        <div class="inbox">
+          <ul>
+            <li>
+              <div class="email unread">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Christine Tucker</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div class="star">
+                  <i class="fas fa-star"></i>
+                <p>August 2</p>
+                </div>
+            </div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+        <div class="sent-body section">
+        <div class="heading">
+          <h1>Sent</h1>
+        </div>
+        <div class="inbox">
+          <ul>
+            
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>George Field</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div>July 25</div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Casey Jones</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div>July 20</div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Maria Sans</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div>July 17</div>
+            </div>
+            </li>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Daisy Ransome</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div>July 1</div>
+            </div>
+            </li>
+           
+             <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Clive O'Connor</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div>June 1</div>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <div class="drafts-body section">
+        <div class="heading">
+          <h1>Drafts</h1>
+        </div>
+        <div class="inbox">
+          <ul>
+            <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Grace Hannah</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div>June 15</div>
+            </div>
+            </li>
+             <li>
+              <div class="email">
+              <div class="email-left">
+                <img>
+                <div class="email-subject">
+                <p>Clive O'Connor</p>
+                <p>Message</p>
+                </div>
+              </div>
+              <div>June 1</div>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <div class="trash-body section">
+        <div class="heading">
+          <h1>Trash</h1>
+        </div>
+        <div class="inbox">
+          <p>This folder is empty</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+</body>
+</html>

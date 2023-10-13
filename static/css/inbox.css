@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #383986;
+    background-color: #452c63;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    font-family: "Source Sans Pro";
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .dashboard {
+    width: 875px;
+    height: 82vh;
+    position: absolute;
+    background-color: #1c1948;
+    margin: 5vh auto;
+    left: 0; right: 0;
+    border-radius: 10px;
+    overflow:hidden;
+    box-shadow:0px 10px 16px 0px rgba(0,0,0,0.6);
+  }
+  textarea{
+    font-size: 19px;
+    color: #2e2e2e;
+  }
+  
+  .dashboard-side {
+    width: 20%;
+    height: 100%;
+    background:rgba(42,50,113, .28);
+    color: #6cacc5;
+    padding: 30px 0 0 50px;
+  }
+  
+  .logo {
+    margin: 20px auto;
+  }
+  
+  .side-nav ul{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+  }
+  
+  .side-nav ul li {
+    cursor: pointer;
+  }
+  
+  li.active {
+    font-weight: bold;
+    color: pink;
+  }
+  
+  .dashboard-container {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+  /*   border: 10px solid white; */
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+  }
+  
+  .dashboard-body {
+    padding: 20px 0 0 20px;
+  }
+  
+  .top-nav {
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+    margin-top: 10px;
+    padding-right: 10px;
+    background-color: white;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: space-between;
+  /*   position: fixed; */
+  }
+  
+  .compose-body, .sent-body, .send_file-body, .drafts-body, .trash-body, .chat-body,.genchat-body {
+    display: none;
+  }
+  
+  .heading {
+    height: 80px;
+  }
+  
+  .heading::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: lightGray;
+    position: absolute;
+    margin: 20px auto 0;
+    left: 0; right: 0;
+  }
+  
+  /* Inbox Section */
+  
+  .inbox {
+    
+  }
+  
+  .email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 130px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: lightGray;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .email-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .email img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: pink;
+    margin-right: 20px;
+    padding: 5px;
+  }
+  
+  .star {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  i {
+    font-size: 14px;
+    color: black;
+  }
+  
+  i:hover {
+    color: #f73bf1;
+  }
+  
+  .unread {
+    font-weight: bold;
+    border: 2px solid black;
+  }
+  
+  .inbox li:hover {
+    padding-bottom: 3px;
+    
+  }
+  
+  .inbox li .email:hover {
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.5);
+    opacity: 1;
+  }
+  
+  /* Compose Section */
+  
+  .compose-message input {
+    width: 90%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    resize: none;
+  }
+  
+  .message-line {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightGray;
+  }
+  #propriete{
+    display: flex;
+    background-color:whitesmoke;
+  }
+  button{
+    padding: 10px 30px;
+    margin: 0 auto;
+  }
+  button.bas-gauche {
+    right:10%;
+    position: absolute;
+    bottom: 50px;
+  }
+
+  #send_private_message{
+    position: absolute;
+    right: 15%;
+    bottom: 0%;
+    margin-bottom: 1%;
+  }
+  
+  /* Private Chat */
+  
+  .private-chat ul {
+    padding: 50px 0;
+  }
+  
+  .private-chat ul li {
+    position:relative;
+    list-style-type: none;
+    width: 4px;
+    background-color: #f73bf1;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  
+  .private-chat ul li::after {
+    background: #f73bf1;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    }
+  
+  .private-chat ul li div{
+    position: relative;
+    width: 250px;
+    padding: 15px;
+    border-radius: 5px;
+    bottom: 0;
+    background: rgba(42,50,113, .28);
+  }
+  
+  .private-chat ul li:nth-child(odd) div {
+    left: 45px;
+  }
+  
+  .private-chat ul li:nth-child(even) div {
+    left: -295px;
+  }
+  
+  .private-chat ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  
+  .private-chat ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+  }
+  
+  .private-chat ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+  }
+  
+  .private-chat ul li.show div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .private-chat time {
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .private-chat ul li div {
+      width: 250px;
+    }
+    .private-chat ul li:nth-child(even) div {
+      left: -289px;
+      /*250+45-6*/
+    }
+  }
+
+
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap");
+  .navbar {
+    height: 60px;
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+    display: block;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15),
+      0px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .navbar .logo {
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16pt;
+    margin: 0%;
+  }
+  
+  .navbar .logo a {
+    text-decoration: none;
+    color: #090909;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+  
+  }
+  
+  .navbar ul li {
+    display: inline;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a {
+    padding: 0.25em 1em 0.25em 1em;
+    color: #090909;
+    text-decoration: none;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+  }
+  
+  .navbar a:hover {
+    color: #777;
+    transition-duration: 0.3s;
+  }
+  
+
+  .send-space{
+    display: inline;
+    position: absolute;
+    bottom: 5%;
+    width: 95%;
+  
+  }
+  .genchat-body input {
+    width: 80%;
+    height: 37px;
+  }
+  .genchat li {
+    font-size: 20px;
+  }

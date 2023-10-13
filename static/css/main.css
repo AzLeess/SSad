@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap");
+
+html {
+  padding: 0%;
+  margin: 0%;
+  height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 15pt;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(23,7,35);
+  background: linear-gradient(10deg, rgba(23,7,35,0.9756945014333859) 39%, rgba(143,170,255,1) 98%)no-repeat center center fixed;
+  background-size: contain;
+} 
+
+.navbar {
+  height: 60px;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  margin-bottom: 2rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-sizing: border-box;
+  display: block;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15),
+    0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar .logo {
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 16pt;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: #090909;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+
+}
+
+.navbar ul li {
+  display: inline;
+  text-decoration: none;
+}
+
+.navbar ul li a {
+  padding: 0.25em 1em 0.25em 1em;
+  color: #090909;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+.navbar a:hover {
+  color: #777;
+  transition-duration: 0.3s;
+}
+
+
+.etiq {
+
+  padding: 1rem;
+  /*
+  width: 25em;
+  height: 28em;
+  margin-top: 2em;
+  margin-left:  2em; 
+  */
+  box-sizing: border-box;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15),
+    0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  background-color: #fff;
+  align-items: center;
+  z-index: 2;
+}
+
+.container_1 h3 {
+margin:1em ;
+
+}
+.container_sm p{
+  margin: 1em;
+  padding: 0.5rem;
+}
+img{
+  object-fit: cover;
+  width: 100%;
+  height: 16em;
+}
+
+.container{
+  margin-left:3rem;
+  margin-right: 3rem;
+  margin-bottom: 4rem;
+  margin-top: 44rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25em;
+
+}
+.etiq{
+  display: block;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.expl {
+  display: block;
+}
+
+.container_sm{
+  display: flex;
+  height: fit-content;
+  margin-bottom: 4em;
+  flex-direction: row;
+}
+
+.container_2 p {
+  margin-left: 0.5rem;
+}
+.container_2 time {
+ margin-left: 1rem;
+}
+
+form{
+
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+form > *{
+  margin-bottom:1rem ;
+}
+
+
+.etiq-h {
+  
+  width: 75vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  margin-left:  0.3em; 
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15),
+    0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  background-color: #fff;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  right: 8%;
+}
+.etiq-h h1{
+  display: flex;
+  width: fit-content;
+  width: 41rem;
+  
+}
+
+
+
+
+/* animation */
+/* dans cette feuille de style est regrouper l'ensemble des elements communs partage
+entre les differentes page html comme l'importation de la police en off-line les animations 
+et d'autres ajustement repetitifs*/
+/* roboto-regular - latin */
+
+/* page transition declaration */ 
+@keyframes In{
+  from {
+      opacity: 0;
+      transform: rotateX(-50deg);
+
+  
+
+  }
+  to {
+      opacity: 1;
+      transform: rotateX(0);
+      
+
+  }
+}
+
+/* application de la transition */
+
+/* animation hover test ==================================*/ 
+a.anime1 {
+  position: relative;
+  cursor: pointer;
+  padding: 2px 0;
+  color: #fff;
+  text-decoration: none;
+}
+a.anime1:hover{
+color: #fff;
+text-decoration: none;
+}
+
+a.anime1:before, a:after {
+content: '';
+position: absolute;
+width: 0%;
+height: 2px;
+bottom: -2px;
+background: #fff;
+}
+
+a.anime1:before {
+left: 0;
+}
+a.anime1:after {
+right: 0;
+background: 	rgb(191, 207, 48);
+transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a.anime1:hover:before {
+background:rgb(191, 207, 48);
+width: 100%;
+transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a.anime1:hover:after {
+background: transparent;
+width: 100%;
+transition: 0s;
+}
+
+
+
+
+/* hover animation 3 */
+
+
+a.anime3 {
+    color: whitesmoke;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+a.anime3::before {
+  content: '';
+  background-color: rgba(97, 126, 150, 0.75);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  cursor: pointer;
+}
+a.anime3:hover::before {
+  bottom: 0;
+  height: 100%;
+  cursor: pointer;
+}
+a.anime3::before {
+  content: '';
+  cursor: pointer;
+  background-color: rgba(50, 23, 102, 0.75);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+/*fin anime 3 */
+
+
+a.anime{ 
+  font-family: 'Nanum Gothic' , sans-serif ;
+  display: inline;
+  padding-top:10px;
+  text-decoration: none;
+  position: relative;
+  /*margin-top: 40%;*/
+  margin: 3px;
+}
+a.anime::after{
+  content: "";
+  background:white;
+    mix-blend-mode: exclusion;
+  width: calc(100% + 15px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+    transition: all .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+a.anime:hover::after{
+    height: calc(100% + 8px);
+}
+
+
+
+
+/* animations go in */
+/*l'utilisation de nom de classe pour appliquer certain parametre suplementaire a nos element 
+ainsi ca ressmble a l'application d'une certaine fonction sur l'element */
+.goin {
+position: relative;
+left: -1500px;
+animation-name: paragraph;
+animation-duration: 1s;
+animation-delay: 0.5s;
+animation-fill-mode: forwards;
+}
+
+@keyframes paragraph {
+0% { left: -1500px; }
+100% { left: 0; }
+}
+/* header animation */
+.godown {
+
+animation-name: header1;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+}
+
+@keyframes header1 {
+0% { top: -1000px; }
+100% { top: 0; }
+}
+
+
+.container2{
+  margin-left:3rem;
+  margin-right: 3rem;
+  margin-bottom: 4rem;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  height: 25em;
+
+}
+
+
+
